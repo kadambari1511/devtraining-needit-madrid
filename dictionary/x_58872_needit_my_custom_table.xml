@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="update_synch=true" extends="sys_metadata" label="My Custom Table" max_length="40" name="x_58872_needit_my_custom_table" type="collection">
+        <element label="configuration item" max_length="40" name="configuration_item" type="string"/>
+        <element label="Date" max_length="40" name="date" type="glide_date"/>
+        <element label="descrption" max_length="40" name="descrption" type="string"/>
+        <element choice="3" default="100" label="Priority" max_length="40" name="priority" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="high" value="100"/>
+                <element inactive_on_update="false" label="low" value="110"/>
+                <element inactive_on_update="false" label="medium" value="120"/>
+            </choice>
+        </element>
+        <element label="Refer" max_length="32" name="refer" reference="ci_identifier" type="reference"/>
+        <element label="Image" max_length="100" name="u_icon_1" type="icon"/>
+        <index name="index">
+            <element name="refer"/>
+        </index>
+    </element>
+</database>
